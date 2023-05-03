@@ -1,0 +1,51 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+    <!-- Breadcrumb Start -->
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-light mb-30">
+                    <a class="breadcrumb-item text-dark" asp-action="Index" asp-controller="Home">Home</a>
+                    <span class="breadcrumb-item active">Login</span>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Login</span></h2>
+        <div class="row px-xl-5">
+            <div class="col-lg-7 mb-5">
+                <div class="contact-form bg-light p-30">
+                    <div id="success"></div>
+                    <form method="post" asp-action="Login"asp-controller="Account">
+                        <div class="control-group">
+                            <input type="email" class="form-control" asp-for="Email" placeholder="Your Email..."
+                                required="required" data-validation-required-message="Please enter your Email" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="password" class="form-control" asp-for="Password" placeholder="Your Password..."
+                                required="required" data-validation-required-message="Please enter your Password" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        
+                        <div>
+                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Login
+                                </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Contact End -->
+

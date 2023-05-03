@@ -1,0 +1,45 @@
+﻿@model List<Category>
+
+      <main>
+                    <div class="container-fluid px-4">
+                       
+                       
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                          <a asp-action="Create" asp-controller="Category" class="btn btn-outline-success">Add New</a>
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                           
+                                            <th>Name</th>
+                                            <th></th>
+                                            <th>Image</th>
+                                            <th></th>
+                                            
+                                        </tr>
+                                    </thead>
+                            
+                                    <tbody>
+                                       
+                                       @foreach (var item in Model)
+                            { <tr>
+                                <td>@item.Name</td>
+                                <td></td>
+                                <td><img  src ="@string.Format("/Uploads/{0}",item.Image)"width="50" height="50" /></td>
+                          <td> <a asp-action="Edit" asp-route-id="@item.Id"class="btn btn-outline-info">Edit</a>
+                           <a asp-action="Delete" asp-route-id="@item.Id"class="btn btn-outline-danger">Delete</a>
+                            </td>  </tr>
+                            }
+                                      
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+ 

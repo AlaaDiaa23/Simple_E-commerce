@@ -1,0 +1,50 @@
+﻿@model List<Contact>
+
+      <main>
+                    <div class="container-fluid px-4">
+                       
+                       
+                        <div class="card mb-4">
+                           
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                           
+                                            <th>Name</th>
+                                            <th></th>
+                                            <th>Email</th>
+                                            <th></th>
+                                            <th>Subject</th>
+                                            <th></th> 
+                                            <th>Message</th>
+                                            <th></th>
+                                            
+                                            
+                                        </tr>
+                                    </thead>
+                            
+                                    <tbody>
+                                       
+                                       @foreach (var item in Model)
+                            { <tr>
+                                <td>@item.Name</td>
+                                <td></td> 
+                                <td>@item.Email</td>
+                                <td></td> 
+                                <td>@item.Subject</td>
+                                <td></td>
+                                <td>@item.Message</td>
+                                <td></td>
+                           </tr>
+                            }
+                                      
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+ 
